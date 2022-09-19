@@ -11,4 +11,4 @@ const productPostController = async (req, res) => {
   }
 }
 
-module.exports = productPostControllercd
+module.exports = productPostController
