@@ -1,10 +1,10 @@
 jest.mock("../../models/products")
-const productDeleteController = require("../../controllers/productDeleteController")
 const ProductModel = require("../../models/products")
+const productDeleteController = require("../../controllers/productDeleteController")
 
 describe("Product Controller", () => {
 
-  it("Should be able to delete the product", async() => {
+  it("Should be able to delete the product by id", async() => {
     const reqMock = {params: {id: "3"}}
     
     const resMock = {

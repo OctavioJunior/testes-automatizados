@@ -1,8 +1,8 @@
 jest.mock("../../models/products")
 // const mongoose = require("mongoose")
 // const { MONGO_URI } = require("../constants")
-const productGetAllController = require("../../controllers/productGetAllController")
 const ProductModel = require("../../models/products")
+const productGetAllController = require("../../controllers/productGetAllController")
 
 describe("Product Controller", () => {
   // let conn;
@@ -21,8 +21,8 @@ describe("Product Controller", () => {
 
     await productGetAllController(reqMock, resMock)
         
-    expect(ProductModel.find).toHaveBeenCalledTimes(1)
     expect(resMock.json.mock.calls).toHaveLength(1)
+    expect(ProductModel.find).toHaveBeenCalledTimes(1)
   })
 
   // afterAll(() => {
